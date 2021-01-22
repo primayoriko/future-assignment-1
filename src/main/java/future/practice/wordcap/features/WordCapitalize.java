@@ -14,6 +14,15 @@ public class WordCapitalize {
         return res;
     }
 
+    public static String capitalizeTwo(String word){
+        String[] res = StringUtils.split(word, " ");
+        for(int i = 0; i < res.length; i++){
+            res[i] = StringUtils.capitalize(res[i]);
+        }
+
+        return StringUtils.join(res, " ");
+    }
+
     public static void printCapOne(String word){
         String[] arr = capitalizeOne(word);
         System.out.print("[");
